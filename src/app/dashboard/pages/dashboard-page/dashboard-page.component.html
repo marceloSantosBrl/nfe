@@ -1,0 +1,22 @@
+<app-layout>
+  <div class="grid grid-cols-12 grid-rows-2 mt-4 mb-4">
+    <h1 class="col-start-1 col-span-10 lg:col-span-4 ml-5 text-3xl">Vendas Realizadas</h1>
+    <button class="row-start-2 col-start-2 col-span-3 lg:col-span-2 lg:row-start-1 lg:col-start-7" mat-raised-button
+            color="primary">Cadastrar Estoque
+    </button>
+    <button class="row-start-2 col-end-12 col-span-3 lg:col-span-2 lg:row-start-1 lg:col-start-10" mat-raised-button
+            color="primary">Cadastrar Venda
+    </button>
+  </div>
+  <div class="grid grid-cols-4 gap-3 md:grid-cols-12 lg:ml-2 lg:mr-2 xl:ml-10 xl:gap-3 lg:gap-2 mb-4">
+    <app-dashboard-card
+      class="col-span-10 sm:col-start-2 sm:col-span-2 md:col-span-5 lg:col-span-4 xl:col-span-3 xl:col-start-2"></app-dashboard-card>
+    <app-dashboard-card
+      class="col-span-10 sm:col-start-2 sm:col-span-2 md:col-span-5 lg:col-span-4 xl:col-span-3"></app-dashboard-card>
+    <app-dashboard-card
+      class="col-span-10 sm:col-start-2 sm:col-span-2 md:col-span-5 lg:col-span-4 xl:col-span-3"></app-dashboard-card>
+  </div>
+  <div class="w-100 overflow-y-scroll table-container lg:ml-4 lg:mr-4">
+    <app-dashboard-table></app-dashboard-table>
+  </div>
+</app-layout>

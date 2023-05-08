@@ -1,0 +1,26 @@
+<mat-card>
+  <mat-card-content>
+    <div class="grid grid-cols-2">
+      <img [src]="imgModel.path" [alt]="imgModel.alt">
+      <div>
+        <div>
+          <h1>{{title}}</h1>
+          <div  class="text-2xl">
+            <p
+              *ngIf="type === 'currency'
+      else numericValue">
+              {{value | currency: 'BRL'}}</p>
+            <ng-template #numericValue>
+              <p>{{value}}</p>
+            </ng-template>
+          </div>
+          <div class="flex">
+            <img *ngIf="change > 0" src="assets/upArrow.svg" alt="set para cima">
+            <img *ngIf="change < 0" src="assets/downArrow.svg" alt="set para baixo">
+            <span>{{change | percent}}(30 dias)</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </mat-card-content>
+</mat-card>
