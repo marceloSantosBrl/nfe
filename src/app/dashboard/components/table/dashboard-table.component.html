@@ -1,0 +1,26 @@
+<table mat-table matSort [dataSource]="data" class="mat-elevation-z8">
+  <ng-container matColumnDef="product">
+    <th mat-sort-header mat-header-cell *matHeaderCellDef> Produto </th>
+    <td mat-cell *matCellDef="let element"> {{element["product"]}}</td>
+  </ng-container>
+  <ng-container matColumnDef="amount">
+    <th mat-sort-header mat-header-cell *matHeaderCellDef> Quantidade </th>
+    <td mat-cell *matCellDef="let element"> {{element["amount"]}} </td>
+  </ng-container>
+  <ng-container matColumnDef="brand">
+    <th mat-sort-header mat-header-cell *matHeaderCellDef> Marca </th>
+    <td mat-cell *matCellDef="let element"> {{element["brand"]}} </td>
+  </ng-container>
+  <ng-container matColumnDef="value">
+    <th mat-sort-header mat-header-cell *matHeaderCellDef> Valor </th>
+    <td mat-cell *matCellDef="let element"> {{element["value"]}} </td>
+  </ng-container>
+  <ng-container matColumnDef="nfeAmount">
+    <th mat-sort-header mat-header-cell *matHeaderCellDef> NF-e </th>
+    <td mat-cell *matCellDef="let element"> {{element["nfeAmount"]}} </td>
+  </ng-container>
+  <tr mat-header-row *matHeaderRowDef="columns"></tr>
+  <tr mat-row *matRowDef="let row; columns: columns;"></tr>
+</table>
+<mat-paginator [length]="200" [pageSizeOptions]="[10, 50, 100]" aria-label="Select page">
+</mat-paginator>
